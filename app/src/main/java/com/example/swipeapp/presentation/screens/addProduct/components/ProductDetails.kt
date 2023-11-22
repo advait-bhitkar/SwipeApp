@@ -45,6 +45,7 @@ fun productDetails(viewModel: AddProductViewModel) {
 
             TextField(
                 value = productName,
+                singleLine = true,
                 onValueChange = {
                         newText ->
                     viewModel.onEvent(AddProductEvent.ProductNameEntered(newText))
@@ -90,6 +91,7 @@ fun productDetails(viewModel: AddProductViewModel) {
 
             TextField(
                 value = productCategory,
+                singleLine = true,
                 onValueChange = {
                         newText ->
                     viewModel.onEvent(AddProductEvent.ProductCategoryEntered(newText))
@@ -145,6 +147,7 @@ fun productDetails(viewModel: AddProductViewModel) {
 
             TextField(
                 value = productPrice,
+                singleLine = true,
                 onValueChange = {
                         newText ->
                     viewModel.onEvent(AddProductEvent.ProductPriceEntered(newText))
@@ -191,6 +194,7 @@ fun productDetails(viewModel: AddProductViewModel) {
 
             TextField(
                 value = productTax,
+                singleLine = true,
                 onValueChange = {
                         newText ->
                     viewModel.onEvent(AddProductEvent.ProductTaxEntered(newText))
