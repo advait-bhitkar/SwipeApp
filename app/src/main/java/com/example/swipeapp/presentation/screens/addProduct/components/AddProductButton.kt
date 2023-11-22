@@ -24,7 +24,7 @@ fun addProductButton(viewModel: AddProductViewModel, imageUri: Uri) {
         onClick = {
             viewModel.onEvent(AddProductEvent.AddProductButton(context, imageUri))
         },
-        colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
+        colors = ButtonDefaults.buttonColors(MaterialTheme.colors.primary),
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth(),

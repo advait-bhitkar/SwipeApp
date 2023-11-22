@@ -12,12 +12,12 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Screen.ProductListScreen.route) {
-        composable(route = Screen.ProductListScreen.route) {
+    NavHost(navController, Screen.ProductListScreen.route) {
+        composable(Screen.ProductListScreen.route) {
             val viewModel = getViewModel<ProductListViewModel>()
-            ProductList(viewModel = viewModel, navController)
+            ProductList(viewModel, navController)
         }
-        composable(route = Screen.AddProductScreen.route) {
+        composable(Screen.AddProductScreen.route) {
             val viewModel = getViewModel<AddProductViewModel>()
             AddProduct(viewModel, navController)
         }
